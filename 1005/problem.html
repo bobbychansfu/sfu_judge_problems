@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<body>
+    <h1>Smart Sort</h1>
+    <p>
+        Alice just designed a really smart computer: a fully parallel computer!
+        She managed to get it partially funded by an anonymous benefactor,
+        and is now building it.
+    </p>
+    <p>
+        However, her benefactor has recently asked her a question that made her
+        blood run cold:
+    </p>
+    <p>
+        <i>"What's the use of such a computer?"</i>
+    </p>
+    <p>
+        Being a theoretical computer scientist, Alice has no clue how to answer.
+        She comes to you for help, and you suggest doing a simple task:
+        sorting a list of numbers.
+    </p>
+    <p>
+        Alice is stunned! This is a wonderful idea, she's sure that her computer
+        could do it faster than a regular one.
+        However, she's busy building, so tasks you with writing the sorting program.
+    </p>
+    <h2>Interaction</h2>
+    <p>
+        <b>
+            This is an interactive problem.
+        </b>
+        This means that you have to be extra careful with whitespace and formatting.
+        Output no extra newlines, and exit your code the moment you receive a "-1".
+        The judge will start off by sending you a line of input with two integers:
+        $n$, the number of elements of the list, and $m$, the number of batches of
+        parallel instructions you have, including the one used to solve the problem.
+    </p>
+    <p>
+        You can send queries of two kinds: a set of parallel instructions
+        or a solution
+    </p>
+    <p>
+        To send a set of $k$ ($k \leq \lfloor n/2 \rfloor$) parallel instructions,
+        output
+    </p>
+    <p class="monospace">
+            q k
+    </p>
+    <p>
+        on a line by itself, then $k$ instructions (each on a line by themselves, numbers and comparators seperated by whitespace):
+    </p>
+<pre>
+a &lt; b
+</pre> or 
+<pre>
+a &gt; b
+</pre>
+    <p>
+        Once all instructions have been sent as a batch, the judge will respond to all of them on a single line.
+        In order, it will output 0 if the instruction was false, and 1 if correct.
+        If you sent too many instructions, batches, or your formatting was incorrect, a single
+        -1 will be sent, and you must exit your program.
+    </p>
+    <p>
+        To submit an answer: print 'a', then the sorted list indices on a single line, seperated by whitespace.
+        The judge will either respond with '1', meaning that you are correct, or '-1', meaning
+        that you are wrong. Either way, exit the program.
+    </p>
+    <h3>Cases:</h3>
+    <p>30 Points: $2 \leq n \leq 10, m = 100$</p>
+    <p>70 Points: $2 \leq n \leq 100, m = 100$</p>
+    <p>100 Points: $2 \leq n \leq 1000, m = 100$</p>
+    <h3>Sample Interaction 1</h3>
+    Suppose the list contained the values $\{100, 50\}$
+<pre class="monospace">
+Judge         Solution
+2 10
+                q 1
+                0 < 1
+0
+                a 1 0
+1
+</pre>
+    <h3>Sample Interaction 2</h3>
+<pre>
+Judge         Solution
+4 4
+                q 2
+                0 < 1
+                2 < 3
+1 0
+                q 2
+                0 > 2
+                3 > 1
+0 1
+                a 0 1 3 2
+1
+</pre>
+</body>

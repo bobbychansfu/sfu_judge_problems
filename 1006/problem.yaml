@@ -1,15 +1,12 @@
 source: SFU Judge
 license: cc by-sa
-name: Simple Sum
+name: Mountain Madness
 author: Ari Blondal
 rights_owner: SFU Online Judge
 id: 1
 time_sec: 1
 mem_MB: 1024
-validator: ignore_whitespace
-# validator: custom
-validator_opts:
-  lang: C++17
+validator: line_rstrip
 cases:
   sample: 0
-  secret: 100
+  secret: 50
