@@ -1,25 +1,14 @@
-var fs = require('fs')
-var stdinBuffer = fs.readFileSync(0);
+const { createInterface } = require('readline');
+const rl = createInterface({
+    input: process.stdin,
+    output: null
+});
 
-start()
-
-async function start(){
-    console.log()
-    let n = 
-    n = parseInt(n)
-    
-    let line = await getline()
-    let nums = line.split(' ').map(e => parseInt(e))
-
-    let sum = 0
-    for(var i=0; i<nums.length; ++i){
-        sum += nums[i];
-    }
-    console.log(sum.toString());
-
-    // process.exit();
-    console.log('');
-    // process.exit()
-}
-
-
+rl.question('', n => {
+    rl.question('', nums => {
+        var sum = 0;
+        nums.split(' ').forEach(e => {sum += parseInt(e);});
+        console.log(sum);
+        rl.close();
+    });
+});

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<body>
+    <h1>Quirky Queries</h1>
+    <p>
+        Bob is painting his wooden fence.
+        Bob has a long fence, so he grabs a can of paint, starts somewhere
+        along the line, and paints wood planks one by one until he runs out of
+        paint, moving in a single direction.
+    </p>
+    <p>
+        However, he often does this absent-mindedly,
+        and forgets what colour his fence is painted where.
+    </p>
+    <p>
+        Help him keep track!
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line of input will contain two positive integers,
+        $n$ and $q$, the number of wooden planks in his fence
+        and the number of queries you will be given.
+        The wooden planks are numbered from $1$ to $n$, and are
+        originally all painted <pre>white</pre>
+    </p>
+    <p>
+        Then follow $q$ queries, each on their own line<br>
+        They either represent that he has painted
+        planks $a$ through $b$ (inclusive, $a \leq b$) of his fence with colour <pre>col</pre>:<br>
+        <pre>p a b col</pre> (<pre>col</pre> will be 10 characters or fewer)<br>
+        A query can also ask what colour plank $i$ is coloured, in which case
+        you will print the colour:<br>
+        <pre>q i</pre>
+    </p>
+    <h2>Output</h2>
+    <p>
+        Output the correct colour for each of the queries of the second type.
+        You do not need to output anything for queries of the first type.
+    </p>
+    <h3>Cases:</h3>
+    <p>20 Points: $n, q \leq 10^3$</p>
+    <p>40 Points: $n, q \leq 10^4$</p>
+    <p>60 Points: $n, q \leq 10^5$</p>
+    <p>80 Points: $n \leq 10^9, q \leq 10^5$</p>
+    <p>100 Points: $n \leq 10^9, q \leq 10^6$</p>
+<h3>Sample Input</h3>
+<pre>
+10 5
+q 1
+p 2 4 black
+p 1 2 green
+q 2
+q 3
+</pre>
+<h3>Sample Output</h3>
+<pre>
+white
+green
+black
+</pre>
+</body>
