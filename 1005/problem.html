@@ -55,7 +55,9 @@ a &lt; b
 a &gt; b
 </pre>
     <p>
-        Once all instructions have been sent as a batch, the judge will respond to all of them on a single line.
+        A single index (number) may only appear at most once as part of a batch.
+	So you cannot compare 0 and 1 at the same time as 1 and 2.
+    	Once all instructions have been sent as a batch, the judge will respond to all of them on a single line.
         In order, it will output 0 if the instruction was false, and 1 if correct.
         If you sent too many instructions, batches, or your formatting was incorrect, a single
         -1 will be sent, and you must exit your program.
