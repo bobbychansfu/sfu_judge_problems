@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<body>
+    <h1>John's Bank</h1>
+    <p>
+        John’s National Bank has a straightforward interest calculation algorithm.  The accrued total amount (total amount of money you have) is calculated using the given principal amount and the time period in years using the following equation
+    <br>
+
+        $total = principle * (1.0 + rateOfInterest * years) $
+    </p>
+    <p>
+        The rateOfInterest is given by the following table:
+    </p>
+        
+    <table>
+        <th><td>Principle Amount </td> <td>Rate of Interest</td></th>
+        <tr>
+            <td>
+                0.00 &le; p &lt; 1000.00 
+            </td>
+            <td>
+                0.025
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1000.00 &le; p &lt; 10,000.00 
+            </td>
+            <td>
+                0.02
+            </td>
+        </tr>
+        <tr>
+            <td>
+                10,000.00 &le; p &lt; 100,000.00 
+            </td>
+            <td>
+                0.015
+            </td>
+        </tr>
+        <tr>
+            <td>
+                p &ge; 100,000.00 
+            </td>
+            <td>
+                0.01
+            </td>
+        </tr>
+    </table>
+
+    <p>
+        Help John to write a program that asks the user for the principal amount $p$ and the number of years $y$, then prints the total $t$ after $y$. If the principle or the number of years is less than 0, print “not possible.”
+    </p>
+    
+    <h2>Input</h2>
+    <p>
+        First input is a floating-point number $p$, the principal. The second input is a floating-point number $y$, the total number of years.
+    </p>
+    <h2>Output</h2>
+    <p>
+        The number $t$ rounded to two decimal places, the total amount after $y$ years.
+    </p>
+<h3>Sample Run 1</h3>
+<p>
+    Here is a sample run of your program. Please note that the <b>bold text</b> represents user inputs. Please note that the prompts must match the following <em>exactly</em> to get maximum points.
+</p>
+<pre>
+    Please enter the principal: <b>23000.99</b>
+    Please enter the years: <b>2.3</b>
+    3794.52
+</pre>
+
+<h3>Sample Run 2</h3>
+<pre>
+    Please enter the principal: <b>99.23</b>
+    Please enter the years: <b>-3</b>
+    not possible
+</pre>
+
+</body>
