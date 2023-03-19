@@ -1,0 +1,12 @@
+source: CSES
+license: cc by-sa
+name: Repetitions
+author: Antti Laaksonen
+rights_owner: CSES
+id: 1057
+time_sec: 1
+mem_MB: 1024
+validator: ignore_whitespace
+cases:
+  sample: 0
+  secret: 100
