@@ -12,7 +12,7 @@ else:
 if num_books > MAX_BOOKS:
   print("Sorry, members can only check out 5 books at a time.")
 else:
-  print("Thanks! You have been issued a",membership, "membership.")
+  print("Thanks! You have been issued a",membership, "membership. ")
   
   days = int(input("How many days would you like to keep the books? "))
   
