@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<body>
+    <h1>One Piece</h1>
+    <p>
+        You are Monkey D. Luffy, an aspiring pirate in search of Gold D. Roger's hidden treasure. Your goal is to find the treasure based on the given instructions and avoiding being caught by other pirates or falling off a cliff. You are given three possible moves to perform: 'step', 'dig', or 'rest'. Be cautious; you are not the only one looking for the treasure!
+    </p>
+    <p>
+        Game rules
+        <ol>
+            <li>If you take more than 10 'step' moves, you fall off a cliff and lose the game.</li>
+            <li>If you take fewer than 4 'step' moves, or an even number of 'step' moves between 4 and 10, you will be captured by pirates and lose the game.</li>
+            <li>If you take an odd number of 'step' moves greater than 4 and less than 10, and then perform a 'dig' move, you will find the treasure and win the game.</li>
+            <li>The 'rest' move does not impact the game outcome but can be used any number of times between 'step' moves.</li>
+        </ol>
+        For example, if the user takes 5 'step' moves and then a 'dig' move, the user finds the treasure and wins the game.
+    </p>
+   
+    <p>
+        Write a program that continues to prompt the user for moves until they either win or lose the game. The user should enter one of the three possible moves ('step', 'dig', 'rest') in each turn. The moves are NOT case sensitive, 'DIG' equals 'Dig' equals 'diG'. 
+    </p>
+    <h3>
+        Constraints
+    </h3>
+
+    <p>
+        The input for the moves will always be a string, either 'step', 'dig', or 'rest'.
+    </p>
+
+
+    <h3>
+        Sample Run 1
+    </h3>
+    <p>
+        Here is a sample run of your program. Please note that the <b>bold text</b> represents user inputs. Please note that the prompts must match the following <em>exactly</em> to get maximum points.
+    </p>
+    <p>
+<pre>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>dig</b>
+Oh no! You have been captured by pirates! You lose!
+</pre>
+    </p>
+
+    <h3>
+        Sample Run 2
+    </h3>
+    
+    <p>
+<pre>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Oh no! You fell off a cliff! You lose!
+</pre>
+    </p>
+
+    <h3>
+        Sample Run 3
+    </h3>
+    
+    <p>
+<pre>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>dig</b>
+Congratulations! You found the treasure and won the game!
+</pre>
+<br>
+
+    </p>
+
+
+</body>

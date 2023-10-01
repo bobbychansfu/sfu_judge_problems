@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<body>
+    <h1>Hogwarts Math</h1>
+    <p>
+        George Weasley is terrified of his math test because of one problem in particular. Fortunately, laptops are allowed in Hogwarts, and he needs your help to write a program to solve his problem.
+    </p>
+
+    <p>
+        George is given a very large number. He is tasked with continuously dividing this number by one of the prime numbers: 2, 3, 5, or 7, until the quotient becomes 0. He must record the number of times the division was made. Your task is to write a program to help him with this.
+    </p>
+    <ul>    
+        <li>Your program should prompt the user to enter a large number $n$.	</li>
+        <li>It should then prompt the user to enter one of the prime numbers $p$: 2, 3, 5, or 7.</li>
+        <li>The program should divide the large number by the chosen prime number continuously until the quotient is 0 and keep track of the number of divisions made.</li>
+        <li>Finally, the program should output the number of times the division was made.</li>
+
+    </ul>
+    
+    
+    <h3>
+        Constraints
+    </h3>
+
+    <p> 
+        The large number $n$ is a positive integer where $1 \leq n \leq 10000$ <br>
+        The prime number $p$ will be either 2, 3, 5, or 7.
+    </p>
+
+    <h3>
+        Sample Run 1
+    </h3>
+    <p>
+        Here is a sample run of your program. Please note that the <b>bold text</b> represents user inputs. Please note that the prompts must match the following <em>exactly</em> to get maximum points.
+    </p>
+    <p>
+<pre>
+Enter a large number: <b>100</b>
+Enter a prime number (2, 3, 5, or 7): <b>2</b>
+Number of divisions made:  7
+</pre>
+Explanation: <br>
+100 is divided by 2 to get 50 (1 division) <br> 
+50 is divided by 2 to get 25 (1 division) <br> 
+25 is divided by 2 to get 12 (1 division, remainder is discarded) <br> 
+12 is divided by 2 to get 6 (1 division) <br> 
+6 is divided by 2 to get 3 (1 division) <br> 
+3 is divided by 2 to get 1 (1 division, remainder is discarded) <br> 
+1 is divided by 2 to get 0 (1 division, remainder is discarded). <br>
+In total, there are 7 divisions.
+    </p>
+
+    <h3>
+        Sample Run 2
+    </h3>
+    
+    <p>
+<pre>
+Enter a large number: <b>9999</b>
+Enter a prime number (2, 3, 5, or 7): <b>3</b>
+Number of divisions made:  9
+</pre>
+    </p>
+
+
+
+</body>

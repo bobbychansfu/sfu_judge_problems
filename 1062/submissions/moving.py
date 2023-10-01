@@ -7,5 +7,5 @@ if(month == 11 or month == 12 or month == 1):
 elif(date % 10 == 9 or date % 10 == 0):
     print("It is not a good day to move in")
 else:
-    print("It is good day to move in")
+    print("It is a good day to move in")
 

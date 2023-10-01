@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<body>
+    <h1>Fire Escape</h1>
+    <p>
+        You are trapped in a building on fire and must make the correct choices to escape. You will be prompted to answer the following questions:
+        <ol>
+            <li>(1) Take many things or (2) Take nothing?</li>
+            <li>(1) Stay in the room or (2) Leave the room?</li>
+            <li>(1) Walk or (2) Crawl?</li>
+            <li>(1) Take the elevator or (2) Take the stairs?</li>
+        </ol>
+    </p>
+    <p>
+        For each question, if the user chooses option (1), inform the user that they have not survived and restart the questionnaire from the first question. If the user chooses option (2), commend them and proceed to the next question.
+    </p>
+    <p>    
+        If the user correctly chooses option (2) for all four questions, notify them that they have successfully escaped the fire and terminate the program.
+    </p>
+    <p>
+        The user will have a maximum of four attempts to escape; after which, the program will end.
+    </p>
+   
+    <p>
+        Write a program that continues to prompt the user for moves until they either win or lose the game. The user should enter one of the three possible moves ('step', 'dig', 'rest') in each turn. The moves are NOT case sensitive, 'DIG' equals 'Dig' equals 'diG'. 
+    </p>
+
+    <h3>Requirements</h3>
+
+    <p>
+        <ul>
+            <li>Prompt the user to answer each question in sequence.</li>
+            <li>Validate the user's input and handle any invalid responses gracefully, re-prompting the user as necessary.</li>
+            <li>If the user chooses option (1) for any question, restart the questionnaire.</li> 
+            <li>If the user chooses option (2) for all questions, congratulate them and end the program.</li>   
+            <li>Limit the user to four attempts to escape. If the user fails to escape after four attempts, terminate the program with an appropriate message.</li>   
+           
+        </ul>
+    </p>
+
+    <h3>
+        Sample Run 1
+    </h3>
+    <p>
+        Here is a sample run of your program. Please note that the <b>bold text</b> represents user inputs. Please note that the prompts must match the following <em>exactly</em> to get maximum points.
+    </p>
+    <p>
+<pre>
+(1) Take many things or (2) Take nothing? <b>2</b>
+(1) Stay in the room or (2) Leave the room? <b>1</b>
+You did not survive. Try again.
+You have 3 attempts left.
+(1) Take many things or (2) Take nothing? <b>2</b>
+(1) Stay in the room or (2) Leave the room? <b>2</b>
+(1) Walk or (2) Crawl? <b>2</b>
+(1) Take the elevator or (2) Take the stairs? <b>2</b>
+Congratulations! You have successfully escaped the fire!
+</pre>
+    </p>
+
+    <h3>
+        Sample Run 2
+    </h3>
+    
+    <p>
+<pre>
+(1) Take many things or (2) Take nothing? <b>1</b>
+You did not survive. Try again.
+You have 3 attempts left.
+(1) Take many things or (2) Take nothing? <b>1</b>
+You did not survive. Try again.
+You have 2 attempts left.
+(1) Take many things or (2) Take nothing? <b>1</b>
+You did not survive. Try again.
+You have 1 attempt left.
+(1) Take many things or (2) Take nothing? <b>1</b>
+You did not survive. Try again.
+You've run out of attempts. The program is now ending.
+</pre>
+    </p>
+
+    <h3>
+        Sample Run 3
+    </h3>
+    
+    <p>
+<pre>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>rest</b>
+You decided to rest. Be cautious and make your next move wisely.
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>step</b>
+Enter your move ('step', 'dig', or 'rest'): <b>dig</b>
+Congratulations! You found the treasure and won the game!
+</pre>
+<br>
+
+    </p>
+
+
+</body>
