@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<body>
+    <h1>Boiling Water</h1>
+    <p>
+        Felix has several pots of water at certain temperatures. His task is to simulate the process of boiling them. The pot can only increase its temperature by a certain amount every second, and he wants to determine how long it will take for the water to reach their boiling points (100°C). Write a program to help Felix calculate the total time for all his pots to boil.
+        
+    </p>
+   
+    <h2>Inputs</h2>
+    <p>
+ An integer $T$ ($1 \leq T \leq 100$) - the number of pots of water. <br>
+Then, for each test case, a new line containing: <br>
+Two integers $S$ and $R$ ($0 \leq S, R \leq 1000$) - the starting temperature of the water in Celsius and the rate at which the temperature increases every second, respectively. Please note there are no prompts to the user in this question.
+
+    </p>
+    <h3>
+        Sample Input 1
+    </h3>
+
+<pre>
+3
+20 5
+95 2
+100 1
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+19
+</pre>
+<p>
+    Explanation:
+    <ul>
+            <li>In the first test case, the water starts at 20°C and increases by 5°C every second. So, after 16 seconds, the temperature will be 100°C.</li>
+            <li>In the second test case, the water starts at 95°C and increases by 2°C every second. So, after 3 seconds, the temperature will be 101°C.</li>
+            <li>In the third test case, the water is already at boiling point, so the time required is 0 seconds.</li>
+    </ul>
+    the total will be $16 + 3 + 0 = 19$.
+    </p>
+
+    <h3>
+        Sample Input 2
+    </h3>
+
+<pre>
+4
+35 3
+80 6
+1 4
+3 7
+</pre>
+<h3>
+    Sample Output 2
+</h3>
+
+<pre>
+65
+</pre>
+</body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<body>
+    <h1>Blackjack Scoring</h1>
+    <p>
+        In a game of general blackjack, a player receives n cards. The objective is to achieve a score as close to 7n as possible without exceeding it. Here's how the scoring works:
+        <ul>
+            <li>Cards numbered 2 through 10 are scored at their face value (i.e., 2 through 10 points).</li>
+            <li>Face cards (Jack, Queen, King), numbered 11 through 13 are each scored as 10 points.</li>
+            <li>The Ace card, numbered 1, can be scored as either 1 or 11 points, whichever results in a better score for the player.</li>
+        </ul>
+    </p>
+    <p>
+        Write a program that:
+        <ol>
+            <li>Asks the user for an integer n representing the number of cards.</li>
+            <li>Prompts the user to input card values between 1 and 13, a total of $n$ times.</li>
+            <li>Outputs:
+                <ul>
+                    <li>"Busted" if the total score of the n cards exceeds 7n.</li>
+                    <li>"Blackjack" if the total score of the n cards is exactly 7n.</li>
+                    <li>The total score if neither of the above conditions is met.</li>
+                </ul>
+            </li>
+        </ol>
+    </p>
+
+    <h3>
+        Sample Run 1
+    </h3>
+    <p>
+        Here is a sample run of your program. Please note that the <b>bold text</b> represents user inputs. Please note that the prompts must match the following <em>exactly</em> to get maximum points.
+    </p>
+    <p>
+<pre>
+Number of cards (n): <b>2</b>
+Card 1 (between 1 and 13): <b>2</b>
+Card 2 (between 1 and 13): <b>3</b>
+5
+</pre>
+    </p>
+
+    <h3>
+        Sample Run 2
+    </h3>
+    
+    <p>
+<pre>
+Number of cards (n): <b>2</b>
+Card 1 (between 1 and 13): <b>3</b>
+Card 2 (between 1 and 13): <b>1</b>
+Blackjack
+</pre>
+Explanation: The card valued at 3 is worth 3 points. In this case, the card with a value of 1 is counted as 11, as it benefits the player. Thus, 3 + 11 equals 14, which is 7 times 2. Therefore, it's a blackjack.
+    </p>
+
+    <h3>
+        Sample Run 3
+    </h3>
+    
+    <p>
+<pre>
+Number of cards (n): <b>3</b>
+Card 1 (between 1 and 13): <b>12</b>
+Card 2 (between 1 and 13): <b>10</b>
+Card 3 (between 1 and 13): <b>3</b>
+Busted
+</pre>
+    </p>
+
+
+
+</body>

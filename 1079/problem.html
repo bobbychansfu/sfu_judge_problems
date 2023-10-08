@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<body>
+    <h1>Pumping Iron</h1>
+    <p>
+        In the SFU gym, there are three types of weighted plates: 5kg, 10kg, and 20kg. Your task is to find all combinations of these plates to achieve a given total weight. The order must prioritize the 20kg plates first, then 10kg, and finally 5kg.
+    </p>
+   
+    <h2>Inputs</h2>
+    <p>
+        An integer $W$ ($5 \leq W \leq 350$) representing the total weight. You may assume $W$ ends with either a '0' or '5'.
+    </p>
+    <h3>
+        Sample Input 1
+    </h3>
+
+<pre>
+35
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+20kg: 1, 10kg: 1, 5kg: 1
+20kg: 1, 10kg: 0, 5kg: 3
+20kg: 0, 10kg: 3, 5kg: 1
+20kg: 0, 10kg: 2, 5kg: 3
+20kg: 0, 10kg: 1, 5kg: 5
+20kg: 0, 10kg: 0, 5kg: 7
+</pre>
+
+  <h3>
+        Sample Input 2
+    </h3>
+
+<pre>
+5
+</pre>
+<h3>
+    Sample Output 2
+</h3>
+
+<pre>
+20kg: 0, 10kg: 0, 5kg: 1
+</pre>
+</body>
