@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<body>
+    <h1>Broken Spiral</h1>
+    <p>
+        With the language decoder handy, Amy is now roaming around the ship hallways, hoping to find some clues on how to get out.
+        The ship is huge and the corridors seem endless. Each room has a letter on it, but they don't make a lot of sense to Amy.
+        Naturally, she cannot just barge into every single room, as she risks being detected, and Amy is not really interested
+        in learning what that entails. After spending what seemed an eternity sneaking around this infernal ship,
+        she could not find a single map or an info table! "These guys rely on technology way too much",
+        thinks Amy. Who knows, maybe she is right. 
+    </p>
+    <p>
+      Eventually, she notices a tiny door with a shy, tattered label: "Archive" (as shown on the decoder device).
+      Amy tries the handle, and it budges! She goes in. Among the piles of useless stuff, our friend sees a ripped-in-half
+      poster, which could be a map of the ship. Okay, we can work with this!
+    </p>
+    <p>
+      The map contains letters formed in what could have been a spiral starting from A, alphabetically - that is,
+      if not for the ripped off part. At the bottom, there is a legend: 
+      "A - Apodyterium, B - Bathroom, C - Cafeteria, ... P - Pod Station ...". That's what we are looking for!
+      Unfortunately, to understand where Amy is, the whole map is required, so Amy now
+      need to restore the ripped off part. Her decoder device has some memory left, so she decides to add the
+      map restoring functionality to it as well. Given limited memory though, she wants the program to be
+      as short as possible.
+    </p>
+    <h2>Input</h2>
+    <p>
+        The input will consist of a single integer $n$ ($2 \leq n \leq 100$), the size of the original poster.
+    </p>
+    <h2>Output</h2>
+    <p>
+        Output the other half of the map.
+        Please be careful with whitespace, as the solution is sensitive to whitespace
+        used.
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+2
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
++ === +
+\A B |
+  \C |
+     +
+</pre>
+<h3>Sample Input 2</h3>
+<pre>
+10
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
++ =================== +
+\A B C D E F G H I J |
+  \K L M N O P Q R K |
+    \M N O P Q R S L |
+      \G H I J S T M |
+        \S T K T U N |
+          \U L U V O |
+            \M V W P |
+              \W X Q |
+                \Y R |
+                  \S |
+                     +
+</pre>
+
+<h2>Scoring</h2>
+<p>
+    You will get 50 points for submitting a working solution.
+</p>
+<p>
+    The length of your code will be counted in number of ASCII characters.
+    Furthermore, for each language, points will be assigned as follows:
+    <br>
+    - Shortest code - 100 points<br>
+    - 2nd shortest code - 83 points<br>
+    - 3rd shortest code - 67 points<br>
+    You can only get points for one language, and the language in which you scored 
+    the highest will give you points. This means that you can deny teams points by
+    scoring well in multiple languages.
+</p>
+</body>

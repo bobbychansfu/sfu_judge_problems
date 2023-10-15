@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<body>
+    <h1>Tubular Shenanigans</h1>
+    <p>
+      Amy follows her unique spiral map leading to the pod station, but her path takes an unexpected turn when she encounters an alien that's seemingly blocking her path!
+      Curiously, the alien seems preoccupied with some sort of game and doesn't pay Amy any attention at all.
+      If Amy can successfully decipher the alien's intricate game, she just might earn her passage.
+      The stakes are high, and as she further inspects the perplexing puzzle, the alien's demeanor shifts from amusement to anticipation.
+      As the alien watches, he says in Alienglish, "Earthling. Solve this, and you may pass."
+    </p>
+    <p>
+        Amy observes a peculiar tube with both ends open and a number of identical balls initially travelling at identical speeds inside the tube.
+        The alien wonders, if you are given the starting position of the balls in the tube and the velocities of the balls, could you figure out how many balls are left in the tube at any given time?
+        You know that this is quite a complex task, as the balls within the tube could collide and bounce off of each other, resulting in many complex game states.
+        Help Amy solve the alien's problem.
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line of the input consists of four integers, $n$, $l$, $v$ and $q$ indicating the number of balls in the tube, the length of the tube in meters, the velocity of the balls (in meters per second), and the number of queries you will have to answer. <br>
+        The next $n$ lines will contain an integer $p$ ($0 < p < l$) and the word LEFT or RIGHT indicating that a ball is located $p$ meters from the left side of the tube and the direction it is travelling intially.
+        The next $q$ lines will contain one integer $t$, which represents a time in seconds.
+    </p>
+    <h2>Output</h2>
+    <p>
+        For each time $t$, output a single integer: the number of balls in the tube at time $t$.
+        A ball is considered as having left the tube when its position reaches either $0$ or $l$. Assume the balls are point masses.
+    </p>
+
+<h3>Sample Input 1</h3>
+<pre>
+3 6 1 4
+1 LEFT
+3 RIGHT
+4 RIGHT
+0
+1
+2
+3
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+3
+2
+1
+0
+</pre>
+<h3>Sample Input 2</h3>
+<pre>
+4 6 1 3
+2 RIGHT
+3 LEFT
+4 RIGHT
+5 LEFT
+2
+4
+6
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+3
+1
+0
+</pre>
+<h3>Sample Input 3</h3>
+<pre>
+2 5 2 3
+1 LEFT
+2 RIGHT
+0
+1
+2
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+0
+1
+2
+</pre>
+
+<h2>Scoring</h2>
+<ul>
+  <li>20 Points: $n, q \leq 10^4$</li>
+  <li>50 Points: $n, q \leq 10^5$</li>
+  <li>100 Points: $n, q \leq 10^6$</li>
+</ul>
+</body>

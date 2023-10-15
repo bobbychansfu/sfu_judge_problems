@@ -1,0 +1,24 @@
+source: SFU Judge
+license: cc by-sa
+name: A Dull PassWord
+author: Ari Blondal
+rights_owner: SFU Online Judge
+id: 1
+time_sec: 5
+mem_MB: 1024
+type: interactive
+interactive-judge: interactor.py
+interactive-lang: Python3
+static_data:
+  - words.txt
+
+cases:
+  sample: 10
+  t10_100: 30
+  t10_60: 40
+  t20_100: 50
+  t20_95: 60
+  t20_90: 70
+  t20_85: 80
+  t20_80: 90
+  t20_75: 100
