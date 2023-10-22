@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<body>
+    <h1>A Dull Password</h1>
+    <p>
+        Amy finally arrives at the 'P' door to the escape pod station! 
+        She walks in, and as she catches her breath, she looks around. For whatever reason, there is another door in front of her.
+        The door is massive with a keyboard on it, and five large squares lying above it.
+        Typing on the keyboard, she sees the letters appear in the squares.
+        She types in a word, and upon pressing enter, some of the squares light up with a soft yellow glow.
+        Others light up with a bright green!
+    </p>
+    <p>
+        She recognizes this game.
+        The password to get to the escape pod is a five-letter word, and she can guess words to get hints.
+        Each word that she guesses must be a valid five-letter word.
+        After she has typed in the word and hit enter, she gains feedback.
+    </p>
+    <ul>
+        <li>A green light, denoted by a star <code>*</code>, indicates that the letter is correct and in the correct position.</li>
+        <li>A yellow light, denoted by a dash <code>-</code>, indicates that the letter is in the correct word, but in another location.</li>
+        <li>No light, denoted by an underscore <code>_</code> indicates that letter is not in the word.</li>
+        <li>Note that a single letter can only trigger a single light.</li>
+    </ul>
+    <p>
+        (This game is Wordle)
+    </p>
+
+    <h2>Implementation Details</h2>
+    <p>
+        The list of available words will be made available to your program through the path <code>words.txt</code>.
+        These are the first 2500 words of a famous list by Donald Knuth.
+    </p>
+    <p>
+        <b>
+            This is an interactive problem.
+        </b>
+        This means that you have to be extra careful with whitespace and formatting.
+        Output no extra newlines, and exit your code the moment you receive an "ERROR", or guess the last word.
+        Furthermore, <b>Make sure to flush after your print statements</b>.
+        This can be done through C++'s <code>endl</code>, and Python's <code>print</code> function flushes automatically.
+    </p>
+    <p>
+        The judge will start off by sending two integers: the number of words you will be guessing, and your maximum total number of guesses over all words.
+    </p>
+    <p>
+        Then, you must print a guess: a five-letter lowercase English word (from <code>words.txt</code>).
+    </p>
+    <p>
+        After you submit a correct guess, the judge will output <code>*****</code>,
+        and if there are still words to guess, you will have to continue the game,
+        starting guessing again for a new word.
+        If you are done with all the words, exit immediately.
+    </p>
+    <p>
+        If you guess an invalid word, or run out of guesses,
+        or anything else bad happens, the judge will print <code>ERROR</code>.
+        If you ever receive this output, please terminate your program immediately
+        so that your submission is marked as a Wrong Answer rather than some other error.
+    </p>
+
+    <h2>Testing</h2>
+    <p>
+        To test your program, run the supplied <code>run_interactive.py</code> program:
+    </p>
+    <pre>
+        python3 run_interactive.py "python3 interactor.py sample2.in" "your program"
+    </pre>
+    <p>
+        Make sure that <code>words.txt</code> and <code>sample.in</code> are in the same folder
+        as the three other programs.
+    </p>
+    <p>
+        Note that the problem has a time limit of 5 seconds per test!
+        A result of <code>TLE</code> is not guaranteed if you use too much time (interactive judges are hard to make, blame Ari), so beware.
+    </p>
+
+    <h3>Cases:</h3>
+    <ul>
+        <li>10 Points: Sample test case</li>
+        <li>30 Points: 10 words per test case, and 100 total guesses.</li>
+        <li>40 Points: 10 words per test case, and 60 total guesses.</li>
+        <li>50 Points: 20 words per test case, and 100 total guesses.</li>
+        <li>60 Points: 20 words per test case, and 95 total guesses.</li>
+        <li>70 Points: 20 words per test case, and 90 total guesses.</li>
+        <li>80 Points: 20 words per test case, and 85 total guesses.</li>
+        <li>90 Points: 20 words per test case, and 80 total guesses.</li>
+        <li>100 Points: 20 words per test case, and 75 total guesses.</li>
+    </ul>
+
+    <h3>Sample Interaction 1</h3>
+<pre>
+    judge >> 2 100
+    prog >> hello
+    judge >> *****
+    prog >> doors
+    judge >> -*_-_
+    prog >> crowd
+    judge >> _---*
+    prog >> world
+    judge >> *****
+</pre>
+</body>

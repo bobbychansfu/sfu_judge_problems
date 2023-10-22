@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<body>
+    <h1>Bedtime</h1>
+    <p>
+        It's midterm season over at Strange & Fabulous University, and while many students are trying their hardest
+        to prepare for their exams, some have opted for rather unconventional activities.
+        For instance, instead of hitting the books, a fraction of students are participating in weird competitions. 
+    </p>
+    <p>
+      Our protagonist in this story, Amy, albeit a diligent student, has also chosen the latter option,
+      despite having an important exam scheduled for the following day.
+      Although the event turned out to be a lot of fun, and Amy made some new friends,
+      she ultimately had to spend the entire evening and a significant portion of the subsequent night cramming for her exam.
+    </p>
+    <p>
+      Now, feeling both content with her knowledge and utterly exhausted, she's ready to hit the sack.
+      However, there's a twist to her predicament — as her phone was recently purchased, the time settings are all messed up!
+      This task is proving to be quite a challenge for Amy's sleepy mind, and she's in need of some assistance.
+    </p>
+    <h2>Input</h2>
+    <p>
+        The input will consist of two lines.
+        The first line will display the time, denoted as $t_1$, on Amy's phone in a 12-hour format <code>(hh:mm:ss am/pm)</code>
+        The second line will indicate the time, denoted as $t_2$, at which her alarm is set, also in the same 12-hour format.
+        It's important to note that due to different timezones, the alarm time might not necessarily be in the AM.
+        ($t_1 \le t_2$) and ($0 \le t_2 - t_1 \le 24H$)
+    </p>
+    <h2> Output</h2>
+    <p>
+      Output number of minutes that Amy gets to rest, rounding down.
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+05:05:05 am
+07:07:07 am
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+122
+</pre>
+<h3>Sample Input 2</h3>
+<pre>
+10:00:00 pm
+06:00:00 am
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+480
+</pre>
+<h3>Sample Input 3</h3>
+<pre>
+10:00:12 am
+09:15:00 am
+</pre>
+<h3>Sample Output 3</h3>
+<pre>
+1394
+</pre>
+</body>

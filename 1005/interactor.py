@@ -32,7 +32,7 @@ while(num_queries > 0):
         results = []
         if int(req[1]) > num_nums//2:
             print(-1, flush=True)
-            sys.exit(0)
+            sys.exit(1)
 
         for i in range(int(req[1])):
             cmp = input().split()
