@@ -1,4 +1,4 @@
-a,b = tuple(map(int,input().split(" ")))
+
 def geom(a,b):
     c1,c2=0,0
     for z in range(b):
@@ -12,6 +12,7 @@ def geom(a,b):
     zz=c1+c2
     return zz
 
+a,b = tuple(map(int,input().split(" ")))
 for z in range(b):
     
     for x in range(a):
@@ -21,4 +22,4 @@ for z in range(b):
         print("*"*y , " " , "*"*(a-y))
 
         
-print(geom(a,b)*5)
+# print(geom(a,b)*5)
