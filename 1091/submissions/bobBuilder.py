@@ -1,5 +1,4 @@
-a=int(input("Number of stars: "))
-b=int(input("Number of floors: "))
+a,b = tuple(map(int,input().split(" ")))
 def geom(a,b):
     c1,c2=0,0
     for z in range(b):
@@ -22,4 +21,4 @@ for z in range(b):
         print("*"*y , " " , "*"*(a-y))
 
         
-print("\nCost is : $",(geom(a,b)*5))
+print(geom(a,b)*5)
