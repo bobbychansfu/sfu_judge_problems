@@ -1,9 +1,9 @@
 source: SFU Judge
 license: cc by-sa
-name: Quantum Numbers
+name: BackwardsTown
 author: Bobby Chan
 rights_owner: SFU Online Judge
-id: 1085
+id: 1090
 time_sec: 1
 mem_MB: 1024
 validator: ignore_whitespace

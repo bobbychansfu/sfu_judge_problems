@@ -1,12 +1,12 @@
 source: SFU Judge
 license: cc by-sa
-name: Calendar Constructor
+name: Quantum Numbers
 author: Bobby Chan
 rights_owner: SFU Online Judge
-id: 1088
+id: 1092
 time_sec: 1
 mem_MB: 1024
-validator: line_rstrip
+validator: ignore_whitespace
 cases:
   sample: 0
   secret: 100

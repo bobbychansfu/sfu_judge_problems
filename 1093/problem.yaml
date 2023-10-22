@@ -3,7 +3,7 @@ license: cc by-sa
 name: Blood Alcohol
 author: Bobby Chan
 rights_owner: SFU Online Judge
-id: 1086
+id: 1093
 time_sec: 1
 mem_MB: 1024
 validator: ignore_whitespace

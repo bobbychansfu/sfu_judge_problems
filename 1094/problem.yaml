@@ -1,9 +1,9 @@
 source: SFU Judge
 license: cc by-sa
-name: Enchanted Stones
+name: Dicey Multiples
 author: Bobby Chan
 rights_owner: SFU Online Judge
-id: 1082
+id: 1094
 time_sec: 1
 mem_MB: 1024
 validator: ignore_whitespace
