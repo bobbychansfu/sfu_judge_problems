@@ -1,25 +1,20 @@
+def print_pattern(n,m):
+    # Helper function to print a specific line
+    def print_line(leading_spaces, stars, inner_spaces):
+        print(' ' * leading_spaces + '*' * stars + ' ' * inner_spaces + '*' * stars)
 
-def geom(a,b):
-    c1,c2=0,0
-    for z in range(b):
-    
-        for x in range(a):
-            #print(x,a-x)
-            c1=c1+x+(a-x)
-        for y in range(a,0,-1):
-            #print(y,a-y)
-            c2=c2+y+(a-y)
-    zz=c1+c2
-    return zz
+    for j in range(m):
+        # Top part of the pattern
+        for i in range(n):
+            print_line(n-i-1, i+1, 1)
 
-a,b = tuple(map(int,input().split(" ")))
-for z in range(b):
-    
-    for x in range(a):
-        print("*"*x , " " , "*"*(a-x))
-    
-    for y in range(a,0,-1):
-        print("*"*y , " " , "*"*(a-y))
+        # Middle part of the pattern, stars decreasing
+        for i in range(n-1, -1, -1):
+            print_line(n-i-1, i+1, 1)
 
-        
-# print(geom(a,b)*5)
+
+# Set the size of the pattern
+n = 3
+m = 2
+# Print the pattern
+print_pattern(n,m)
