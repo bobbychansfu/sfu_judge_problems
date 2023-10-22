@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<body>
+    <h1>Merlin and the Enchanted Stones</h1>
+    <p>
+        Long ago, a talented young wizard named Merlin was known for his ability to solve complex puzzles using magical Python spells. The King has ordered him to solve a critical puzzle: In the heart of the kingdom lies a magical forest filled with enchanted stones vital for the safety of the realm. This forest is structured as a grid, with each cell possibly containing an enchanted stone.
+    </p> 
+    <p>
+        Your task is to help Merlin identify the coordinates of all the enchanted stones in the grid.
+    </p>
+    
+    <h3>Input</h3>
+
+    <p>
+        The first line contains two integers $r$ and $c$ ($1 \leq r, c \leq 1000$), separated by a space, indicating the number of rows and columns in the grid, respectively. The next $r$ lines describe the grid. Each of these lines contains $c$ characters separated by a space, representing a row of the grid. Each character is either an 'X' (representing an enchanted stone) or an 'O' (representing an empty space). Note: there are no user prompts for this question.
+    </p>
+
+    <h3>Output</h3>
+
+    <p>
+        Output all the coordinates of the 'X's in the grid, representing the enchanted stones. Each coordinate should be represented by a pair (row, column), and each pair should be on a new line. The rows and columns are 1-indexed. The coordinates should be listed in row-major order (left to right, top to bottom). If there are no stone, output "None". 
+    </p>
+    
+    <h3>Sample Input 1</h3>
+
+<pre>
+3 3
+O X O
+X O O
+O O X 
+</pre>
+
+    <h3>Sample Output 1</h3>
+
+<pre>
+1 2
+2 1
+3 3
+</pre>
+
+<h3>Sample Input 2</h3>
+
+<pre>
+3 3
+O O O
+O O O
+O O O 
+</pre>
+
+    <h3>Sample Output 2</h3>
+
+<pre>
+None
+</pre>
+<p>Explanation: In this example, there are three enchanted stones located at positions (1, 2), (2, 1), and (3, 3) on the grid.</p>
+</body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<body>
+    <h1>Blood Alcohol</h1>
+    <p>
+        In the heart of the city, where the standard blood alcohol concentration limit was 0.08%, Officer Lana's patrol car was equipped with the latest "BAC Detector." This device, programmed with a function known as <code>checkLimit()</code>, could instantly determine if drivers were under or over the legal drinking limit.
+    </p> 
+    <p>
+        One foggy evening, as she neared Duffy's Pub, Lana noticed a car zigzagging across the lanes. She signaled for the driver to pull over and activated her BAC Detector. The device hummed, and in moments, it revealed the driver's alcohol level: 0.16%.
+    </p>
+    <p>
+        The young driver, a look of regret crossing his features, mumbled, "I thought I had less." <br>
+        "Sorry, but the law's clear," Lana responded as the device displayed its unyielding verdict: "You are going straight to jail." <br>
+        Though the streets were quiet, the residents slept soundly, knowing that the <code>checkLimit()</code> function and the officers like Lana were there to keep the roads safe, ensuring that those over 0.15% were taken off the streets.
+
+    </p>
+    <p>
+        Write a function named <code>checkLimit()</code> that accepts a single parameter: a floating-point number representing a person's blood alcohol content (BAC) as a percentage. The function should return one of three strings based on the provided BAC:
+    </p>
+    <ul>
+        <li>If the BAC is less than 0.08%, the function should print out 'You are free to go'.</li>
+        <li>If the BAC is equal to or greater than 0.08% but less than 0.15%, the function should print out 'You have been charged with DUI'. </li>
+        <li>If the BAC is equal to or greater than 0.15%, the function should print out 'You are going straight to jail'.</li>
+
+    </ul>    
+To complete this task, you can the provided sample code and write the <code>checkLimit(bac)</code> function. Do not change anything else in the code.  <br>
+<code>checkLimit(0.05)</code> prints out: <code>You are free to go</code> <br>
+<code>checkLimit(0.08)</code> prints out: <code>You have been charged with DUI</code> <br>
+<code>checkLimit(0.20)</code> prints out: <code>You are going straight to jail</code> <br>
+
+</p>
+
+
+</body>
