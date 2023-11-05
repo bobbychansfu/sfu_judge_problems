@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<body>
+    <h1>Captain Matrix</h1>
+    <p>
+        Captain Matrix, the infamous pirate of the Seven Seas of Data, had a peculiar obsession with collecting treasure maps. Unlike other pirates, he didn't just collect any old maps; he only sought after those that led to the legendary Matrix Isles, where the sands were said to be strewn with ancient numeric stones arranged in grids of n by m.
+
+    </p>
+    <p>
+        One day, Captain Matrix stumbled upon two such maps, each leading to a different Matrix Isle. However, instead of leading him to two separate treasures, these maps were magical and their grids overlaid perfectly when held against the light of the full moon, revealing the true path to the treasure. The catch was that to find the exact location of the treasure, Captain Matrix had to combine the numeric stones from both maps by summing up the corresponding numbers.
+    </p>
+    <p>    
+        Help Captain Matrix find his treasure by writing a program to sum the two n by m matrices.
+    </p>
+    <h3>Input</h3>
+    <p>
+        The first line of input contains two space-separated integers, $r$ and $c$, representing the number of rows and columns in the matrices. The next $2r$ lines contain $c$ integers each, representing the values in the two matrices. There are no user prompts. 
+    </p>
+    <h3>Output</h3>
+    <p>
+        Your program should output $r$ lines, each containing $c$ space-separated integers, representing the matrix obtained by summing the corresponding elements of the two input matrices.
+    </p>
+
+
+    <h3>
+        Sample Input 1
+    </h3>
+    <p>
+<pre>
+3 3
+1 2 3
+4 5 6
+7 8 9
+1 0 1
+0 1 0
+1 0 1
+</pre>
+    </p>
+
+    <h3>
+        Sample Output 1
+    </h3>
+    
+    <p>
+<pre>
+2 2 4
+4 6 6
+8 8 10
+</pre>
+    </p>
+    <p>
+        Explanation: The input begins with the number of rows (3) and columns (3). The next three lines represent the first matrix, and the following three lines represent the second matrix. The output is the sum of the two matrices: <br>
+        First matrix: <br>
+<pre>
+    1 2 3
+    4 5 6
+    7 8 9
+</pre>
+<br>
+Second Matrix: <br>
+<pre>
+    1 0 1
+    0 1 0
+    1 0 1
+</pre> <br>
+
+Summed Matrix: <br>
+<pre>
+    (1+1) (2+0) (3+1)
+    (4+0) (5+1) (6+0)
+    (7+1) (8+0) (9+1)
+</pre>
+<br>
+Which results in: <br>
+<pre>
+    2 2 4
+    4 6 6
+    8 8 10
+</pre>
+
+    </p>
+
+</body>

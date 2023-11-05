@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<body>
+    <h1>Mr. J's Eggs</h1>
+    <p>
+        Mr. J runs a poultry farm and categorizes the eggs produced into four categories based on their weight: damaged eggs (0 grams), small eggs (11 grams), medium eggs (12 grams), and large eggs (greater than 12 grams). The eggs are packed into trays, with each tray holding exactly 6 eggs of the same category.
+
+    </p>
+    <p>
+        The selling price for each full tray varies by the egg category:
+        <ul>
+            <li>Damaged egg tray: $0</li>
+            <li>Small egg tray (11g each): &dollar;8.50</li>
+            <li>Medium egg tray (12g each): &dollar;10.25</li>
+            <li>Large egg tray (>12g each): &dollar;12.55</li>
+        </ul>
+    </p>
+    <p>    
+        Your task is to write a program to calculate the total revenue Mr. J will receive from selling the trays of eggs. The program should consider only full trays of eggs for sale; any incomplete tray by the end of the input should be discarded and not counted towards the revenue.
+    </p>
+    <h3>Input</h3>
+    <p>
+        <ul>
+            <li>The first line of input will contain a single integer $n$ ($1 \leq n \leq 500$), representing the number of eggs.</li>
+            <li>The second line of input will contain $n$ space-separated integers, each representing the weight of an egg in grams. The weight will be one of the following: 0, 11, 12, or a positive integer greater than 12.</li>
+        </ul>
+	</p>
+    <h3>Output</h3>
+    <p>
+        The program should output a single number, the total revenue from selling the full trays of eggs. The output should be formatted as a floating-point number with two decimal places.
+    </p>
+
+
+    <h3>
+        Sample Input 1
+    </h3>
+    <p>
+<pre>
+18
+12 11 0 12 11 12 11 11 12 12 11 0 13 14 0 12 11 11
+</pre>
+    </p>
+
+    <h3>
+        Sample Output 1
+    </h3>
+    
+    <p>
+<pre>
+18.75
+</pre>
+    </p>
+    <p>
+        Explanation: <br>
+        From the sample input, we can sort the eggs into trays as follows:
+        <ul>
+            <li>For 12g eggs: There are seven 12g eggs, which is enough to fill one tray with six eggs, leaving one 12g egg unsorted. The revenue from the 12g egg tray is &dollar;10.25.</li>
+            <li>For 11g eggs: There are eight 11g eggs, which is enough to fill one tray with six eggs, leaving two 11g eggs unsorted. The revenue from the 11g egg tray is &dollar;8.50.</li>
+            <li>For eggs greater than 12g: There are two eggs, which are not enough to fill a tray (since a full tray requires six eggs), so these are discarded.</li>
+            <li>For 0g (damaged) eggs: Three damaged eggs are not enough to fill a tray and are valued at $0 anyway.</li>
+        </ul>
+
+        So, the total revenue from selling the trays of sorted eggs is $10.25 (from one tray of 12g eggs) + $8.50 (from one tray of 11g eggs) = $18.75.
+
+
+    </p>
+
+</body>
