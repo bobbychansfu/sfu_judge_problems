@@ -1,8 +1,15 @@
 def find_unique_speakers(french_speakers, spanish_speakers, english_speakers):
     # Split the strings into sets of names
-    french = set(french_speakers.split(', '))
-    spanish = set(spanish_speakers.split(', '))
-    english = set(english_speakers.split(', '))
+    f = french_speakers.split(',')
+    s = spanish_speakers.split(',')
+    e = english_speakers.split(',')
+    # strip out spaces at the end of the lists
+    f = [x.strip() for x in f]
+    s = [x.strip() for x in s]
+    e = [x.strip() for x in e]
+    french = set(f)
+    spanish = set(s)
+    english = set(e)
 
     # Find students who speak only one language
     only_one_language = (french - spanish - english) | (spanish - french - english) | (english - french - spanish)
