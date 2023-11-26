@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<body>
+    <h1>The International Language Olympiad</h1>
+    <p>
+        In the city of Polyglotta, an annual language competition is held at the Grand Techville Academy. This year, the competition has a unique twist. Participants are from diverse backgrounds, each fluent in either French, Spanish, or English. The challenge for the Techville coders is to create a program that can quickly sort out students who are exclusive speakers of only one of these languages, as they will be given special language bridging classes.
+    </p>
+    <p>
+        The input to the program comes from the Academy's registration data. The first line lists students who speak French, the second line those who speak Spanish, and the third line lists English speakers. The program's task is to output the names of students who speak only one language, sorted alphabetically by their first name.
+    </p>
+
+<h3>Sample Input 1</h3>
+<pre>
+Marie, Pierre, Julien
+Carlos, Ana, Marie
+Lucy, Emma, Julien
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+Ana
+Carlos
+Emma
+Lucy
+Pierre
+</pre>
+
+<p>
+    Explanation: In this sample, 'Marie' and 'Julien' are excluded from the output as they appear in more than one list, indicating they speak more than one language. The rest, who are exclusive to a single language list, are sorted alphabetically by their first names. 
+</p>
+
+<h3>Sample Input 2</h3>
+<pre>
+Julien
+Julien, Marie
+Marie, Julien
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+No one speaks only one language.
+</pre>
+
+</body>

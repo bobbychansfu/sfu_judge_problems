@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<body>
+    <h1>Age Analytics</h1>
+    <p>
+        Kelly, a curious and enthusiastic computer science student, is fascinated by data analytics. She is particularly interested in understanding the age dynamics of her class. To delve into this, she decides to write a program that not only finds the average age of her classmates but also identifies the oldest student(s).
+    </p>
+    <p>
+        <b>Your task is to help Kelly by writing this program. </b> The program should:
+        <ul>
+            <li>Take as input the number of students in the class.</li>
+            <li>Receive each student's name followed by their age (one student per line).</li>
+            <li>Calculate and print the average age of the students, rounded to two decimal places.</li>
+            <li>Identify the oldest student(s) and print their names in lexicographical order.</li>
+        </ul>
+    </p>
+
+    <h3>Input Format</h3>
+
+    <p>
+        The first line contains an integer, $n$, the number of students in the class. <br>
+        The next $n$ lines each contain a string and an integer, representing the name of the student and their age, respectively.
+    </p>
+
+    <h3>Output</h3>
+
+    <p>
+        The first line should display the average age of the class, rounded to two decimal places. <br>
+        The following line(s) should list the name(s) of the oldest student(s), each name on a new line, in lexicographical order.
+    </p>
+
+    <h3>Constraints</h3>
+    <p>
+        <ul>
+            <li>$1 \leq n \leq 100$</li>
+            <li>$1 \leq Age \leg 100$</li>
+            <li>Names consist only of alphabetic characters and are not longer than 20 characters.</li>
+        </ul>
+    </p>
+<h3>Sample Input 1</h3>
+<pre>
+5
+Alice 23
+Bob 25
+Charlie 25
+Diana 22
+Eve 24
+</pre>
+<h3>Sample Output 1</h3>
+<pre>
+23.80
+Bob
+Charlie
+</pre>
+
+<h3>Sample Input 2</h3>
+<pre>
+4
+Liam 18
+Noah 20
+Olivia 18
+Emma 20
+</pre>
+<h3>Sample Output 2</h3>
+<pre>
+19.00
+Emma
+Noah
+</pre>
+
+</body>
