@@ -1,19 +1,24 @@
 source: SFU Judge
 license: cc by-sa
-name: Actual Addition
+name: File Fun
 author: Ari Blondal
 rights_owner: SFU Online Judge
-id: 1
+
 time_sec: 1
 mem_MB: 1024
-validator: ignore_whitespace
+
 input:
-  "*.in": input.txt
+  "*.data": "data.txt"
+  "*.in": stdin
+static_data:
+  - words.txt
+validator: ignore_whitespace
+
 # input: file
 # input_file: input.txt
 # validator: custom
-validator_opts:
-  lang: C++17
+# validator_opts:
+#   lang: C++17
 cases:
   sample: 0
   secret: 100
