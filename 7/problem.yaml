@@ -12,12 +12,12 @@ input:
   "*.in": stdin
 static_data:
   - words.txt
-validator: ignore_whitespace
+checker: ignore_whitespace
 
 # input: file
 # input_file: input.txt
-# validator: custom
-# validator_opts:
+# checker: custom
+# checker_opts:
 #   lang: C++17
 cases:
   sample: 0
