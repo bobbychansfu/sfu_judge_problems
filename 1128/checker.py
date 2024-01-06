@@ -8,7 +8,7 @@ def fail(reason="Wrong Answer"):
 
 # Get test case, reading input the same way as the user #
 #########################################################
-lines = open(0).read().split('\n')
+lines = sys.stdin.read().split('\n')
 n, q = map(int, lines[0].split())
 
 # We need a node per hockey card
