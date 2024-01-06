@@ -1,0 +1,15 @@
+source: SFU Judge
+license: cc by-sa
+name: Cavern Sonar
+author: Ari Blondal
+rights_owner: SFU Online Judge
+id: 1
+time_sec: 1
+mem_MB: 1024
+type: interactive
+interactive-judge: interactor.py
+interactive-lang: Python3
+
+cases:
+  sample: 0
+  secret: 100
