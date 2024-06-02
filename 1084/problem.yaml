@@ -5,7 +5,7 @@ author: George Shramko
 rights_owner: SFU Online Judge
 time_sec: 1
 mem_MB: 1024
-validator: line_rstrip
+checker: line_rstrip
 cases:
   sample: 0
   secret: 50
