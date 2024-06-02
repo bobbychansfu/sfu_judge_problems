@@ -15,7 +15,7 @@ def main():
         print("Current list:", ', '.join(item_list))
 
         found_item = input("Enter found item: ").strip()
-        print(found_item)
+        #print(found_item)
         item_list = remove_item(item_list, found_item)
         if not item_list:
             print("All items have been found. Go to the check out.")

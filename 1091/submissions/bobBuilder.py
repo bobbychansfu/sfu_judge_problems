@@ -13,13 +13,13 @@ def geom(a,b):
 
 a,b = tuple(map(int,input().split(" ")))
 
-for z in range(b):
+# for z in range(b):
     
-    for x in range(a):
-        print("+"*x , " " , "+"*(a-x))
+#     for x in range(a):
+#         print("+"*x , " " , "+"*(a-x))
     
-    for y in range(a,0,-1):
-        print("+"*y , " " , "+"*(a-y))
+#     for y in range(a,0,-1):
+#         print("+"*y , " " , "+"*(a-y))
 
         
 print(geom(a,b)*5)
