@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<body>
+    <h1>Counting</h1>
+    <p>
+    In combinatorial mathematics, counting problems can often be categorized based on whether they involve arrangements (order matters) or selections (order does not matter), and whether repetitions are allowed. Given two integers 
+    $n$ and $r$, you are required to write a function to calculate the number of ways to select $r$ items from $n$ items under different conditions. The function should take four parameters:
+    </p>
+    <ol>
+        <li>order: A boolean indicating whether the order of selection matters.</li>
+        <li>repeat: A boolean indicating whether repetitions are allowed.</li>
+        <li>n: The total number of items.</li>
+        <li>r: The number of items to select.</li>
+    </ol>
+    <p>
+    Write a function called
+<code>counting_formula(order, repeat, n, r)</code> <br>
+Parameters: <br>
+<ul>
+    <li>order (boolean): True if the order matters, False otherwise.</li>
+    <li>repeat (boolean): True if repetition is allowed, False otherwise.</li>
+    <li>n (integer): The total number of items.</li>
+    <li>r (integer): The number of items to select.</li>
+</ul>
+Returns: The number of ways to select $r$ items from $n$ items based on the specified conditions.
+    </p>
+    <h2>Calculation Rules</h2>
+    <ul>
+        <li>Order matters, repetition allowed: $n^r$</li>
+        <li>Order matters, no repetition: $\frac{n!}{(n-r)!}$</li>
+        <li>Order does not matter, repetition allowed: $\frac{(n+r-1)!}{r!(n-1)!}$</li>
+        <li>Order does not matter, no repetition: $\binom{n}{r}$ or $\frac{n!}{r!(n-r)!}$</li>
+    </ul>
+    <h2>Input Format</h2>
+    <p>
+    The function will be called with four arguments: order, repeat, n, and r.
+    </p>
+    <h2>Output Format</h2>
+    <p>
+    The function should return an integer representing the number of ways to select $r$ items from $n$ items based on the specified conditions.
+    </p>
+    <p>
+        To complete this task, you can download the provided sample code and write the <code>counting_formula(order, repeat, n, r)</code> function; do not change anything else in the code.  <br>
+        <code>counting_formula(True, True, 5, 3)</code> returns <code>125</code> <br>
+        <code>counting_formula(True, False, 5, 3)</code> returns <code>60</code> <br>
+        <code>counting_formula(False, True, 5, 3)</code> returns <code>35</code> <br>
+        <code>counting_formula(False, False, 5, 3)</code> returns <code>10</code>
+    </p>
+    <h2>Constraints</h2>
+    <ul>
+        <li>1 $\leq$ n $\leq$ 50</li>
+        <li>1 $\leq$ r $\leq$ 50</li>
+    </ul>
+
+</body>
