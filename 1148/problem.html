@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<body>
+<h1>Trade Wars</h1>
+
+<p>
+    Strange times have fallen on the nation of Nacadia. A king of a neighboring
+    nation has recently signed an order on "Trade and Regulation Impeding
+    Free Flow". In retaliation, some neighbors of Nacadia have signed documents
+    like "Tactical Assessment of Redundant Importation & Freight Fees", while
+    others went so far as to implement a "Tyrannical Application of Regressive Import
+    Fee Framework!" The T.A.R.I.F.F.s, as people started calling them,
+    are now in full effect.
+    To make matters worse, the cities of Nacadia have had a falling out
+    as well, and are now imposing taxes on each other as well. Insanity!
+</p>
+<p>
+    As an aid to the minister of trade, you have been tasked with 
+    re-organizing the trade routes of the nation. The nation has N cities,
+    and K of them are designated as trade hubs, who actively trade with the
+    outside. You have a list of M potential trade routes, each connecting
+    two cities, and each with a certain toll fee, equal in both directions.
+    To minimize the impact on the economy, you want to build the routes in
+    such a way that the sum of all toll fees is minimized, while ensuring
+    that each city is connected to at least one trade hub.
+</p>
+
+<h2>Input</h2>
+On the first line, you will be given three integers $N$, $M$, and $K$
+($1$ $\leq$ $N$ $\leq$ $2*10^5$, $1$ $\leq$ $M$ $\leq$ $2*10^5$, $1$ $\leq$ $K$ $\leq$ $N$).
+
+<h2>Output</h2>
+Output a single integer, the minimum sum of trade route toll fees.
+
+<h2>Scoring</h2>
+
+<ul  style="list-style-type: none;padding: 0; margin: 0" >
+    <li>Case 1 (20 points):  K = 1</li>
+    <li>Case 2 (80 points):  no additional constraints </li>
+</ul>
+
+<h3>Sample Input 1</h3>
+  <pre>
+5 8 1
+1 2 4
+1 3 3
+1 4 2
+1 5 1
+2 3 1
+3 4 1
+4 5 2
+5 2 2
+1     
+  </pre>
+  <h3>Sample Output 1</h3>
+  <pre>
+5
+  </pre>
+  <h3>Sample Input 2</h3>
+  <pre>
+6 10 2
+1 2 2
+2 3 1
+1 4 1
+3 4 2
+2 5 3
+2 4 2
+3 5 2
+4 5 3
+3 6 4
+5 6 1
+1 6    
+  </pre>
+  <h3>Sample Output 2</h3>
+  <pre>
+5
+  </pre>
+
+</body>
+

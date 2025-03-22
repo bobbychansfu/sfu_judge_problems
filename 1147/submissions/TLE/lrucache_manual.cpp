@@ -17,7 +17,7 @@ int main() {
   ll malfunctions = 0;
   list<int> lru;
   unordered_set<int> valid;
-  map<int, list<int>::iterator> m;
+  unordered_map<int, list<int>::iterator> m;
 
   while (k--) {
     string s;

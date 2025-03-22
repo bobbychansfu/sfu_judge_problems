@@ -55,15 +55,11 @@ int main() {
 
       while (bAddr < eAddr) {
         auto it = m.upper_bound(bAddr);
-        if (it != m.begin() &&
-            prev(it)->second->end > bAddr) { // bAddr is cached
-          auto cp = prev(it)->second;        // cached entry
-          auto pp = *it->second;
-          auto cpp = *cp;
+        if (it != m.begin() && prev(it)->second->end > bAddr) { // bAddr is cached
+          auto cp = prev(it)->second;                           // cached entry
 
           // account for possible malfunctions
-          malfunctions +=
-              (min(eAddr, cp->end) - bAddr) * (!cp->valid(globalTime));
+          malfunctions += (min(eAddr, cp->end) - bAddr) * (!cp->valid(globalTime));
 
           // split left side cache entry if necessary (LRU invariant)
           if (cp->start < bAddr) {
@@ -75,8 +71,7 @@ int main() {
             m[eAddr] = lru.insert(next(cp), {eAddr, cp->end, cp->time});
           }
 
-          m[bAddr] =
-              lru.insert(lru.end(), {bAddr, min(eAddr, cp->end), cp->time});
+          m[bAddr] = lru.insert(lru.end(), {bAddr, min(eAddr, cp->end), cp->time});
           bAddr = cp->end;
 
           lru.erase(cp);
@@ -88,11 +83,11 @@ int main() {
           }
 
           cache_entry cp{bAddr, min(nextCachedValue, eAddr), globalTime};
-          
+
           if (freeSpots) { // we can add to the cache
             cp.end = min(cp.end, bAddr + freeSpots);
             freeSpots -= cp.range();
-            
+
           } else { // cache is full
             // evict only as much as needed
             auto last_used = lru.begin();
@@ -106,7 +101,6 @@ int main() {
 
             // split cache entry if necessary (LRU invariant)
             if (last_used->range() > cp.range()) {
-              m.erase(last_used->start);
               last_used->start += cp.range();
               m[last_used->start] = last_used;
             }
@@ -137,8 +131,7 @@ int main() {
       if (shortcut) {
         m.clear();
         lru.clear();
-        m[origEnd - n] =
-            lru.insert(lru.end(), {origEnd - n, origEnd, globalTime});
+        m[origEnd - n] = lru.insert(lru.end(), {origEnd - n, origEnd, globalTime});
       }
 #endif
 
