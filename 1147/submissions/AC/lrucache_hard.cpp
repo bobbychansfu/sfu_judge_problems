@@ -122,7 +122,7 @@ int main() {
           auto it = prev(lru.end());
           auto pv = prev(it);
 
-          if (pv->end + 1 == it->start && (it->time == pv->time || max(it->time, pv->time) < globalTime)) {
+          if (pv->end == it->start && (it->time == pv->time || max(it->time, pv->time) < globalTime)) {
             pv->end = it->end;
             m.erase(it->start);
             lru.erase(it);

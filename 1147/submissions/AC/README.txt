@@ -1,0 +1,1 @@
+you must apply either (or both) the CONSOLIDATION optimization (-DCONSOLIDATE) or the SHORTCUT optimization (-DSHORTCUT) when compiling with g++ for AC

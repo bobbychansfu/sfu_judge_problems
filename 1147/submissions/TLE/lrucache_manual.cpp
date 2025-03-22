@@ -17,6 +17,7 @@ int main() {
   ll malfunctions = 0;
   list<int> lru;
   unordered_set<int> valid;
+  map<int, list<int>::iterator> m;
 
   while (k--) {
     string s;
@@ -27,19 +28,18 @@ int main() {
       cin >> bAddr >> eAddr;
 
       for (; bAddr <= eAddr; bAddr++) {
-        auto it = find(all(lru), bAddr);
-
-        if (it != lru.end()) { // it is cached
+        if (m.count(bAddr)) { // it is cached
           malfunctions += 1 - valid.count(bAddr);
-          lru.erase(it);
+          lru.erase(m[bAddr]);
         } else { // it is not cached
           if (sz(lru) == n) { // evict oldest entry
+            m.erase(lru.front());
             lru.pop_front();
           }
           valid.insert(bAddr);
         }
         // maintain LRU invariant
-        lru.push_back(bAddr);
+        m[bAddr] = lru.insert(lru.end(), bAddr);
       }
     } else if (s == "MALFUNCTION") {
       valid.clear();
