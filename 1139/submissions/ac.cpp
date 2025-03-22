@@ -8,10 +8,6 @@ typedef long long ll;
 typedef pair<int, int> pii;
 typedef vector<int> vi;
 
-int log2(unsigned long i) {
-    return __bit_width(i) - 1;
-}
-
 vector<vector<vi>> st;
 int main() {
 	cin.tie(0)->sync_with_stdio(0);
@@ -61,23 +57,6 @@ int main() {
 		}
 	}
 
-	// rep(i, 0, n) {
-	// 	 rep(j, 0, k) {
-	// 		cout << dp[i][j] << " ";
-	// 	}
-	// 	cout << '\n';
-	// }
-
 	cout << dp[n-1][k-1] << '\n';
-	// int cur = n-1;
-	// int kk = k-1;
-	// int jumps = 0;
-	// do {
-	// 	cout << cur << " ( " << nums[cur] << " ) | ";
-	// 	cur = par[cur][kk];
-	// 	--kk;
-	// 	++jumps;
-	// } while(cur >= 0);
-	// cout << '\n';
 	return 0;
 }
