@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <body>
     <h1>Continuous Calligraphy</h1>
+    
+    <p>
+        <b>Note: Images for this problem are stored in the Google Drive link <a href="https://drive.google.com/drive/folders/1u1cNn6_a1TZ0e_nCg5F40F8DpbLyAym5?usp=share_link">https://drive.google.com/drive/folders/1u1cNn6_a1TZ0e_nCg5F40F8DpbLyAym5?usp=share_link</a>.</b>
+    </p>
+
+
     <p>
         Sorcerer Snow is painting some sigils to use for... reasons. (They may or may not be for performance
         enhancement on future Codeforces contests, but eh, we'll never know.) 
@@ -52,22 +58,22 @@
   </p>
   <h2>Sample 1</h2>
   <h3><code>stdin</code></h3>
-  <p class="monospace">
-    2
-    1
-    0 0 448 840
-    4
-    0 0 0 3
-    0 3 3 3
-    3 3 3 0
-    3 0 0 0    
-</p>
+  <pre>
+2
+1
+0 0 448 840
+4
+0 0 0 3
+0 3 3 3
+3 3 3 0
+3 0 0 0    
+</pre>
 
     <h3><code>stdout</code></h3>
-    <p class="monospace">
-        952
-        12    
-    </p>
+    <pre>
+952
+12    
+    </pre>
 
     <p>
         The first sigil consists of a single line from (0,0) to (448,840), which has a length of 952.
@@ -77,22 +83,25 @@
 
     <h2>Sample 2</h2>
     <h3><code>stdin</code></h3>
-    <p class="monospace">
-        1
-        6
-        0 0 0 2
-        0 2 2 0
-        2 0 2 2
-        0 0 2 2
-        0 0 1 -1
-        2 0 1 -1
+    <pre>
+1
+6
+0 0 0 2
+0 2 2 0
+2 0 2 2
+0 0 2 2
+0 0 1 -1
+2 0 1 -1
             
-    </p>
+    </pre>
     <h3><code>stdout</code></h3>
-    <p class="monospace">
-        28.384776310850235634422    
+    <pre>
+28.384776310850235634422    
+    </pre>
+    <p>
+        A visual explanation of this testcase is in the Google Drive link under the file name ContinuousCalligrahpySample1.png.
     </p>
-    <img src="sample1.png">
+    
     <p>
     The diagram diagram shows how the sigil would be drawn line by line, 
     with the red/black circles indicating the start and end points of the newly added line segments, 

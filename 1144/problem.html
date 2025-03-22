@@ -10,10 +10,10 @@
     </p>
 
     <p>
-        Anyways, after looking at the long string of pasta letters, I then eat some of them, removing them from the string. Upon doing so,
-        I notice that there exists a substring where every single letter of the alphabet appears exactly once. In other words, there is a 
+        Anyways, after looking at the long string of pasta letters and removing some of the characters,
+        it is sometimes possible to have an interesting substring where every single letter of the alphabet appears exactly once. In other words, there is a 
         sequence of exactly 26 consecutive characters in the string that are all unique. Now the question is, what is the fewest number of
-        characters I removed to make this possible?
+        characters that can be removed to make this possible?
     </p>
 
     <h2>Input</h2>
@@ -45,15 +45,15 @@
 
   <h2>Sample 1</h2>
   <h3><code>stdin</code></h3>
-  <p class="monospace">
-    32
-    cxxdefghijklmnopqrstuvwxyzabzxfy
-</p>
+  <pre>
+32
+cxxdefghijklmnopqrstuvwxyzabzxfy
+</pre>
 
     <h3><code>stdout</code></h3>
-    <p class="monospace">
-        2    
-    </p>
+    <pre>
+2    
+    </pre>
 
     <p>
         By deleting the 2nd and 3rd characters, there will be a substring of continuous characters `cdefghijklmnopqrstuvwxyzab`,
@@ -62,15 +62,15 @@
 
     <h2>Sample 2</h2>
     <h3><code>stdin</code></h3>
-    <p class="monospace">
-        32
-        cccdefghijklmnoaqrstuvwxyzabzxfy
-  </p>
+    <pre>
+32
+cccdefghijklmnoaqrstuvwxyzabzxfy
+  </pre>
   
       <h3><code>stdout</code></h3>
-      <p class="monospace">
-          -1    
-      </p>
+      <pre>
+-1    
+      </pre>
   
       <p>
         It is impossible to obtain a cyclic substring of the entire alphabet because the letter p is not in the string.
