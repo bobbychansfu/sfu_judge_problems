@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<body>
+    <h1>Cache Chaos</h1>
+    <p>
+        We are attempting to speed up reads from an old ROM by using an <a
+            href="https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU"> LRU (Least Recently Used) </a> cache
+        with n slots.
+        The cache follows the following behavior for a read operation:
+    </p>
+    <p>
+        If the requested address is already cached, the cached value is returned. It is also now set as the most
+        recently used element and will be the last to be evicted. <br>
+        If the requested address is not cached, we issue a read to the ROM and return the value. Additionally, If there
+        is an empty slot in the cache, the newly read value is added to the cache. If there is no empty slot, the least
+        recently used entry in the cache is evicted, and the newly read value is added.
+    </p>
+    <p>
+        The cache can malfunction at any point, causing the cached data to be corrupted unpredictably. However, the
+        malfunction does not affect the recency history of the cache (which items are considered most or least recently
+        used). Only the currently cached values themselves are corrupted, and the cache's eviction strategy still
+        functions normally.
+    </p>
+    <p>
+        After a malfunction, if we attempt to read an address that happens to be cached, we'll receive a
+        <em>corrupted</em> value. This corrupted value will also be now set as the most recently used value according to
+        the rules above.
+    </p>
+    <p>
+        Given the cache size $n$ and the $k$ events, can you determine how many reads will end up reading a corrupted
+        value?
+    </p>
+    <h2>Input</h2>
+    <p>
+        The first line of the input contains two integers, n (the number of slots in the cache) and k (the number of
+        events).
+        The following k lines will either be of the form:
+    </p>
+    <ul>
+        <li><code>READ x y</code> - The memory addresses [x, y] are read (inclusive). $0 <= x, y < 1E9$</li>
+        <li><code>MALFUNCTION</code> - The cache is corrupted as described above.</li>
+    </ul>
+
+    <h2>Output</h2>
+    <p>
+        The output is a single integer representing the number of corrupted reads after processing all events.
+    </p>
+
+    <h2>Bounds</h2>
+    <p>
+        For 40 points, $n \leq 1000$, $k \leq 1000$. At most 1000000 memory locations will be read. <br>
+        For 100 points, $n \leq 100000$, $k \leq 1000$. At most 100000k memory locations will be read. <br>
+    </p>
+
+    <h3>Sample Input 1</h3>
+    <pre>
+    3 6
+    READ 1 2
+    READ 2 3
+    MALFUNCTION
+    READ 1 3
+    READ 6 7
+    READ 8 9
+    </pre>
+
+    <h3>Sample Output 1</h3>
+    <pre>
+    3
+    </pre>
+
+    <h3>Sample Input 2</h3>
+    <pre>
+    5 3
+    READ 2 6
+    MALFUNCTION
+    READ 1 5
+    </pre>
+
+    <h3>Sample Output 2</h3>
+    <pre>
+    0
+    </pre>
+
+    <p>Due to "<a href="https://en.wikipedia.org/wiki/Thrashing_(computer_science)#Other_uses">cache thrashing</a>", all
+        entries are read from ROM.</p>
+
+</body>

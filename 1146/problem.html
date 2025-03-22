@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<body>
+    <h1>aacdeeHilmx Scramble</h1>
+    <p>
+        My computer used a hexadecimal system to represent decimal numbers. This is normally represented as a set of 16 digits 
+        (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F) in base 16, where A = 10, B = 11, C = 12... F = 15. As an example, the hexadecimal string
+        1C0 would be equal to 1*256 + 12*16 + 0 = 448 in decimal.
+    </p>
+    <p>    
+        Unfortunately, my computer decided to do a funny (probably because I spilled mint chocolate chip ice cream on it) and rearrange all of the values of the digits. 
+        More formally, a rearranging of the digits is definied as a bijective function $f$ from ${0,1,...,E,F}$ to ${0,1,...,E,F}$.
+        Then under a rearrangement, the numerical value of a digit $i \in {0,1,...,E,F}$
+        is equal to $f(i)$. Using the example above, suppose $f(1) = 0$, $f(C) = 1$, $f(0) = 2$,
+        then the value of 1C0 when decoded would be f(1)*256 + f(12)*16 + f(0) = 0*256 + 1*16 + 2 = 18 in decimal.
+        
+        Thankfully, I do know some valid comparison statements under the 
+        new digit labelling system, which may be enough information to determine
+        what each digit was rearranged to, at least assuming that the set of
+        comparisons are actually well-formed. Now the question is 
+        to determine if I can tell what the decoded values of several hexadecimal strings 
+        actually are.
+    </p>
+
+   
+    <h2>Input</h2>
+    <p>
+        The first line contains integers $n (1 <= n <= 2000)$ and $q (1 <= q <= 1000)$.
+    </p>
+    <p>
+        The following $n$ lines each contain a numerical comparison statement either in the form `a > b` or `a < b`, where a and b 
+        are shuffled hexadecimal values. a and b will contain at most 15 digits, and are guaranteed to be the same length. 
+        It is guaranteed that if a unique shuffling of the digits exists, every hexadecimal string represents an actual value. <b>
+        Note that even if a string when decoded would result in a number with leading 0's (such as 007), it is still considered valid.
+        </b>
+    </p>
+    <p>
+        The following $q$ lines will each contain an encoded hexadecimal value $x$. $x$ will contain at most 15 digits.
+    </p>
+    <h2>Output</h2>
+    <p>
+        If there is a contradiction in the numerical comparisons, output `NO`. 
+
+        Otherwise, output `YES` on the first line, and for the following $q$ lines, for each encoded value $x$, either:
+
+        1. If there exists a unique value for which $x$ must be equal to when decoded, output that value.
+
+        2. If $x$ could be decoded to multiple possible values, output `?`.
+    </p>
+ 
+ <h2>Scoring</h2>
+ <p>
+    Case 1 (4 points):
+
+    The worries about the computer being corrupted are completely overblown and it turns out literally none of
+    the digits have been shuffled. In a problem standpoint, this will be guaranteed by the first (and only) 15 comparisons
+    being listed as follows:
+
+ </p>    
+ <p class="monospace">
+    0 < 1
+    1 < 2
+    2 < 3
+    3 < 4
+    4 < 5
+    5 < 6
+    6 < 7
+    7 < 8
+    8 < 9
+    9 < A
+    A < B
+    B < C
+    C < D
+    D < E
+    E < F
+    </p>
+
+ <p>
+    Case 2 (44 points, 48 total):
+    
+    Thankfully, you know (don't ask how) that the digits from 0-9 have not been shuffled, and that only 
+    the digits A-F may have been shuffled. In a problem standpoint, the following 15 comparisons are guaranteed
+    to appear in each testcase:
+
+  </p>  
+
+  <p class="monospace">
+    0 < 1
+    1 < 2
+    2 < 3
+    3 < 4
+    4 < 5
+    5 < 6
+    6 < 7
+    7 < 8
+    8 < 9
+    9 < A
+    9 < B
+    9 < C
+    9 < D
+    9 < E
+    9 < F
+    </p>
+
+    <p>
+        Case 3 (52 points, 100 total):
+    
+        There are NO restrictions on how the digits are encoded (asides from the assumption that if a valid encoding exists, no two digits have the same value).
+  
+    </p>
+  <h2>Sample 1</h2>
+  <h3><code>stdin</code></h3>
+  <p class="monospace">
+    15 3
+    0 < 1
+    1 < 2
+    2 < 3
+    3 < 4
+    4 < 5
+    5 < 6
+    6 < 7
+    7 < 8
+    8 < 9
+    9 < A
+    A < B
+    B < C
+    C < D
+    D < E
+    E < F
+    10
+    E
+    123    
+</p>
+
+    <h3><code>stdout</code></h3>
+    <p class="monospace">
+        YES
+        16
+        14
+        291    
+    </p>
+
+    <p>
+        There are no contradictions in the comparisons, so `YES` is outputted. The following lines contain the decimal representations of the hexadecimal
+        values 10, E, and 123.
+     </p>
+
+     <p>
+        <b>Only this sample case will be verified when submitting your code.</b>
+     </p>
+     
+    
+
+    <h2>Sample 2</h2>
+    <h3><code>stdin</code></h3>
+    <p class="monospace">
+        3 1
+        7 < 5
+        5 < 9
+        9 < 7
+        2    
+    </p>
+    <h3><code>stdout</code></h3>
+    <p class="monospace">
+        NO    
+    </p>
+    <p>
+    The comparisons claim that $f(7) < f(5)$, $f(5) < f(9)$, and $f(9) < f(7)$. However, $f(5), f(7), f(9)$ must all be unique values, so this
+    must be a contradiction, thus `NO` is outputted. Note that no further output is needed for this test case.
+
+    </p>
+
+    <h2>Sample 3</h2>
+    <h3><code>stdin</code></h3>
+    <p class="monospace">
+        15 2
+        F < 0
+    F < 1
+    F < 2
+    F < 3
+    F < 4
+    F < 5
+    F < 6
+    F < 7
+    F < 8
+    F < 9
+    F < A
+    F < B
+    F < C
+    F < D
+    F < E
+    F
+    448    
+    </p>
+    <h3><code>stdout</code></h3>
+    <p class="monospace">
+        YES
+        0
+        ?    
+    </p>
+    <p>
+    There are no contradictions in the comparisons, thus `YES` is outputted first. From the comparisons, we can conclude that $f(F)$ must be the lowest possible value
+    since all other digits have been assigned higher values, thus F must decode to 0. However, no further information can be obtained. 448 can be decoded into decimal
+    as many possible values such as 82 $(f(4) = 1, f(8) = 2)$, 404 $(f(4) = 5, f(8) = 4)$, or 812 $(f(4) = 10, f(8) = 12)$, thus `?` must be outputted.
+
+    </p>
+
+</body>

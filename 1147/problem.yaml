@@ -1,0 +1,13 @@
+source: SFU Judge
+license: cc by-sa
+name: Cache Chaos
+author: Rishi Vijay
+rights_owner: SFU Online Judge
+id: XXX
+time_sec: 5 # 🐓🤝🐍
+mem_MB: 1024
+validator: ignore_whitespace
+cases:
+  easy: 0
+  hard1: 40 # simulatable
+  hard2: 100 # large cache and range sizes

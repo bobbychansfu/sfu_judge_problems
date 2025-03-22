@@ -1,0 +1,20 @@
+source: SFU Judge
+license: cc by-sa
+name: Alpha Medely II
+author: Alexander Wen
+rights_owner: SFU Online Judge
+
+time_sec: 1
+mem_MB: 1024
+
+input:
+  "*.in": stdin
+
+checker: ignore_whitespace
+
+cases:
+  sample: 0
+  short: 26
+  full: 52
+  fuller: 100
+  

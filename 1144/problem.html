@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<body>
+    <h1>Alpha Medely</h1>
+
+    <p>
+        As we all know, alphabet soup is usually a tomato broth containing little pasta bits shaped like letters. For some people with OCD, they
+        may have the tendacy to take each letter in the alphabet soup, lay them on their plate in a line, and then attempt to say the 
+        jumbled up string of nonsense characters. Or maybe that's just me.       
+
+    </p>
+
+    <p>
+        Anyways, after looking at the long string of pasta letters, I then eat some of them, removing them from the string. Upon doing so,
+        I notice that there exists a substring where every single letter of the alphabet appears exactly once. In other words, there is a 
+        sequence of exactly 26 consecutive characters in the string that are all unique. Now the question is, what is the fewest number of
+        characters I removed to make this possible?
+    </p>
+
+    <h2>Input</h2>
+    <p>
+        The first line contains an integer $s$, the length of the string.
+        The second line contains the string, consisting of only lowercase letters.
+    </p>
+ 
+    <h2>Output</h2>
+    <p>
+        Print the minimum number of characters to delete so that there exists a continuous substring
+        containing every letter exactly once. If it is impossible to create such a substring output `-1`.
+    </p>
+ 
+ <h2>Scoring</h2>
+ <p>
+    Case 1 (74 points):
+
+    The string is at most 52 characters long.
+
+ </p>    
+ 
+ <p>
+    Case 2 (26 points, 100 total):
+    
+    The string is at most 5200 characters long.
+
+  </p>  
+
+  <h2>Sample 1</h2>
+  <h3><code>stdin</code></h3>
+  <p class="monospace">
+    32
+    cxxdefghijklmnopqrstuvwxyzabzxfy
+</p>
+
+    <h3><code>stdout</code></h3>
+    <p class="monospace">
+        2    
+    </p>
+
+    <p>
+        By deleting the 2nd and 3rd characters, there will be a substring of continuous characters `cdefghijklmnopqrstuvwxyzab`,
+        which contains every letter of the alphabet exactly once.
+    </p>
+
+    <h2>Sample 2</h2>
+    <h3><code>stdin</code></h3>
+    <p class="monospace">
+        32
+        cccdefghijklmnoaqrstuvwxyzabzxfy
+  </p>
+  
+      <h3><code>stdout</code></h3>
+      <p class="monospace">
+          -1    
+      </p>
+  
+      <p>
+        It is impossible to obtain a cyclic substring of the entire alphabet because the letter p is not in the string.
+     </p>
+
+</body>

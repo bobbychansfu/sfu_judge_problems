@@ -1,0 +1,19 @@
+source: SFU Judge
+license: cc by-sa
+name: Continuous Calligraphy
+author: Alexander Wen
+rights_owner: SFU Online Judge
+
+time_sec: 3
+mem_MB: 1024
+
+input:
+  "*.in": stdin
+
+checker: floats
+eps: 1e-5
+
+cases:
+  sample: 0
+  nodijkstra: 15
+  full: 100

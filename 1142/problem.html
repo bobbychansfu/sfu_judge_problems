@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<body>
+    <h1>Have You Considered That Primes and Palindromes Start With The Same Letter?</h1>
+    <p>
+        Caligula actually came across this funny fact one day and then started wondering about prime numbers.
+        Of course, she has already figured out all the [palindromic primes](https://oeis.org/A002385), so she
+        comes up with a special type of prime called a Paligulaprime. For any positive integer X,
+        X is a Paligulaprime if the conditions below hold:
+    </p>
+    <ul>
+        <li>X >= 10</li>
+        <li>X is prime</li>
+        <li>X//10 is a palindrome</li>
+    </ul>
+    <p>
+        It is here that Caligula gets a delivery in the mail, which happens to be
+        lots and <i>lots</i> of boxes of purple cookies, as well as a pretty much infinite amount of purple cookie dough.
+        Caligula looks at the many boxes and gets dizzy because there are so many! To help her
+        calm down, she decides to make each box contain a Paligulaprime number of purple cookies.
+        Caligula can do two actions to achieve this:
+    </p>
+        
+    <ul> 
+        <li>Caligula can bake exactly 1 purple cookie and place it in any box. This takes 1 minute.</li>
+
+        <li>
+            Caligula can take out 1 purple cookie from any box, which then for some reason will always immediately disintegrate
+            into a syrupy mess of sugar in her hands, meaning she cannot move this cookie to another box. This also takes 1 minute.
+        </li>
+    </ul>
+    <p>
+        It just so happens for Caligula that <i>there are a lot of puple cookies</i>. So much so that Caligula is unsure
+        what the minimum amount of time she'll need to make sure every box has a Paligulaprime number of cookies.
+    </p>
+    
+    <h2>Input</h2>
+    <p>
+        The first line will contain a positive integer $n$ indicating the 
+        number of boxes that were sent. N will be at most 599959, which coincidentally happens to be a Paligulaprime.
+</p>
+   <p>
+    The second line will contain $n$ integers $a_1, a_2, a_3,... a_n  (1 \leq a_i \leq 1234567)$ - the number of purple cookies in each box.      
+    </p>
+    <h2>Output</h2>
+    <p>
+        Output a singular number indicating the minimum number of minutes required to have 
+        every box contain a Paligulaprime number of purple cookies.
+    </p>
+ 
+    <h2>Sample 1</h2>
+    <h3><code>stdin</code></h3>
+    <p class="monospace">
+3
+7 13 28
+    </p>
+    <h3><code>stdout</code></h3>
+    <p class="monospace">
+5    
+</p>
+    <p>
+        The first few Paligulaprimes are 11, 13, 17, 19, 23, and 29. 
+        Caligula can bake 4 cookies in 4 minutes to be placed in the first box so that 11 purple cookies are in there.
+        She can then bake 1 more cookie in 1 minute and place it in the third box so that is contains 29 purple cookies. 
+        13 is already a Paligulaprime so no cookies need to be added or removed.
+        In total, this will take $4 + 0 + 1 = 5$ minutes.
+    </p>
+    <h2>Sample 2</h2>
+    <h3><code>stdin</code></h3>
+    <p class="monospace">
+1
+444444
+
+    </p>
+    <h3><code>stdout</code></h3>
+    <p class="monospace">
+1
+    </p>
+
+<p>Caligula can remove 1 cookie from the box, which will take 1 minute. (They're special cookies.)</p>
+
+<h2>Scoring</h2>
+
+<p>
+    To attain a number of points equal to the 11th lowest Paligulaprime (ie. 47 points), 
+    $n$ will be at most 23.
+    
+    The remaining number of points equal to the 12th lowest Paligulaprime (ie. 53 points) have no restrictions on the input.
+</p>
+
+</body>

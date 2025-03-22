@@ -1,0 +1,19 @@
+source: SFU Judge
+license: cc by-sa
+name: aacdeeHilmx Scramble
+author: Alexander Wen
+rights_owner: SFU Online Judge
+
+time_sec: 1
+mem_MB: 1024
+
+input:
+  "*.in": stdin
+
+checker: ignore_whitespace
+
+cases:
+  sample: 0
+  onlyhexadecode: 4
+  sixscramble: 48
+  full: 100
