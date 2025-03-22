@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<body>
+<h1>Springtime Blossoms</h1>
+
+<p>
+    It is the start of Spring in Simon Fraser Valley. 
+    New life is everywhere: flowers blossom, critters scuttle about, 
+    and baby raccoons are learning their ways to the dining hall. 
+    The air is filled with the sweet scent of cherry blossoms and the sound of birds chirping. 
+    As beautiful as this season is, it comes with hardships for some. 
+    With summer job postings drying up and finals lurking around the corner,
+    you’ve decided to follow in the footsteps of the legendary goose farmer and leave your Computer Science for good. 
+    Unlike that famous ex-architect, however, you lack the funds for a quaint goose farm. 
+    Fortunately, your beloved student society’s garden is in dire need of a caretaker, which is basically the next best thing.
+</p>
+<p>
+    On the first day on the job, your task is to prepare a 1xN strip of land to grow K types of plants.
+    You want to use all of the land, so you will select K non-overlapping segments that completely cover the strip, one for each plant.
+    Unfortunately, the soil is very different from square to square, which makes it difficult
+    for plants to succesfully grow. The less difference there is in soil quality,
+    for a particular plant-type, the better the plant will grow.
+    We define the growth-difficulty of a segment as the difference between the best and worst soil quality in that segment.
+    Growth-difficulty of a strip partition is the sum of the difficulties of the K segments fully covering the strip.
+    We have no budget for fertilizer this year, so the best you can do is to
+    find the optimal way to divide the land. 
+</p>
+
+<h2>Input</h2>
+The first line contains two integers $N$ and $K$ (1 ≤ $N$ ≤ 2000, 1 ≤ $K$ ≤ min(50, N)),
+the length of the strip and the number of plant types, respectively.
+The second line contains N integers $a_1, a_2, \ldots, a_N$ (1 ≤ $a_i$ ≤ $10^9$),
+the soil quality of each square of land.
+
+<h2>Output</h2>
+Output a single integer, the growth-difficulty of the optimal partition.
+
+<h2>Scoring</h2>
+
+<ul  style="list-style-type: none;padding: 0; margin: 0" >
+    <li>Case 1 (10 points):  1 ≤ N ≤ 20, 1 ≤ K ≤ 5</li>
+    <li>Case 2 (10 points):  1 ≤ N ≤ 200 </li>
+    <li>Case 3 (40 points):  1 ≤ N ≤ 500</li>
+    <li>Case 4 (25 points):  1 ≤ N ≤ 1000</li>
+</ul>
+
+<h3>Sample Input 1</h3>
+  <pre>
+3 2
+1 2 3      
+  </pre>
+  <h3>Sample Output 1</h3>
+  <pre>
+1
+  </pre>
+  <h3>Sample Input 2</h3>
+  <pre>
+12 4
+4 8 3 6 9 1 2 1 4 4 12 9   
+  </pre>
+  <h3>Sample Output 2</h3>
+  <pre>
+8
+  </pre>
+
+</body>
+

@@ -1,0 +1,21 @@
+source: SFU Judge
+license: cc by-sa
+name: Springtime Blossoms
+author: George Shramko
+rights_owner: SFU Online Judge
+
+time_sec: 1.5
+mem_MB: 1024
+
+input:
+  "*.in": stdin
+
+checker: ignore_whitespace
+
+cases:
+  sample: 0
+  case1: 20
+  case2: 40
+  case3: 80
+  case4: 100
+  
